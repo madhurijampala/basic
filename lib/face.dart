@@ -6,9 +6,11 @@ void main() {
 }
 
 class MyApp8 extends StatelessWidget {
+  const MyApp8({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
        debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
@@ -16,6 +18,8 @@ class MyApp8 extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
