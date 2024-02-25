@@ -36,7 +36,7 @@ class MyHomePage extends StatelessWidget {
               'Sign in with:',
               style: TextStyle(fontSize: 20),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -46,13 +46,13 @@ class MyHomePage extends StatelessWidget {
                 _buildLoginOption('Twitter', Icons.message, () {}),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             _buildLoginOption('Sign in with Email', Icons.email, () {}),
           ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
