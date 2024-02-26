@@ -7,6 +7,7 @@ void main() {
   runApp(MyApp3());
 }
 
+// ignore: use_key_in_widget_constructors
 class MyApp3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -30,16 +31,8 @@ class _ReportPageState extends State<ReportPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(48, 46, 46, 1),
-        centerTitle: true,
-        title: const Text(
-          "Report",
-          style: TextStyle(
-            fontSize: 20,
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        backgroundColor: Color.fromRGBO(43,151,212,1),
+        
       ),
       body: Center(
         child: Column(
@@ -51,19 +44,19 @@ class _ReportPageState extends State<ReportPage> {
             ),
             const SizedBox(height: 20),
             _buildRadioButton('Remove Fake Content'),
-            _buildRadioButton("Why content Was Not Removed"),
-            _buildRadioButton('Total Count of Reported Content'),
+            _buildRadioButton("Its Spam"),
+            _buildRadioButton('Scam or Fraud'),
             _buildRadioButton('False Information'),
             const SizedBox(height: 15),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _buildButton('Cancel', const Color.fromRGBO(246, 228, 70, 1), () {
+                _buildButton('Cancel', const Color.fromRGBO(43,151,212,1), () {
                   // Navigate to MyApp7
                   _navigateToMyApp7();
                 }),
                 const SizedBox(width: 20),
-                _buildButton('Report', const Color.fromRGBO(246, 228, 70, 1), () {
+                _buildButton('Report', const Color.fromRGBO(43,151,212,1), () {
                   // Report button logic
                   // ignore: avoid_print
                   print('Reported: $selectedOption');
@@ -74,7 +67,7 @@ class _ReportPageState extends State<ReportPage> {
           ],
         ),
       ),
-      bottomNavigationBar: _buildBottomNavigation(),
+      
     );
   }
 
@@ -110,34 +103,20 @@ class _ReportPageState extends State<ReportPage> {
   Widget _buildButton(String text, Color color, VoidCallback onPressed) {
     return ElevatedButton(
       onPressed: onPressed,
+      // ignore: sort_child_properties_last
       child: Text(text),
       style: ElevatedButton.styleFrom(
+        // ignore: deprecated_member_use
         primary: color,
-        onPrimary: Colors.white,
+        // ignore: deprecated_member_use
+        onPrimary: const Color(0xFFEAEEF1),
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(15),
         ),
       ),
     );
   }
 
-  Widget _buildBottomNavigation() {
-    return BottomNavigationBar(
-      items: const [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: 'Home',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.notifications),
-          label: 'Follow Up',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.person),
-          label: 'Profile',
-        ),
-      ],
-    );
-  }
+  
 }

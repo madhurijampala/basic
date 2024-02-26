@@ -1,6 +1,7 @@
+import 'package:basic/reporting.dart';
+import 'package:basic/shield.dart';
 import 'package:flutter/material.dart';
-import'shield.dart';
-import'reporting.dart';
+
 void main() {
   runApp(MyApp8());
 }
@@ -11,7 +12,7 @@ class MyApp8 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-       debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
   }
@@ -24,21 +25,19 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(74, 55, 219, 1),
-        centerTitle: true,
-        title: const Text(
-          "Fake Detected",
-          style: TextStyle(
-            fontSize: 20,
-            color: Color.fromARGB(255, 13, 13, 13),
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        backgroundColor: const Color.fromRGBO(43, 151, 212, 1),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Text(
+              'Fake Detected', 
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             const SizedBox(height: 15),
             Image.asset(
               'assets/prahari.jpeg',
@@ -124,10 +123,6 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
-      
     );
   }
 }
-
-
-

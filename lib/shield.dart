@@ -12,7 +12,7 @@ class MyApp6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner:false,
       home: Scaffold(
         appBar: AppBar(),
         body: Column(
@@ -20,20 +20,22 @@ class MyApp6 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              margin: const EdgeInsets.only(left: 4, right: 4),
-              height: 265,
-              width: 180,
-              color: Colors.blue,
-              child: Image.asset(
-                'assets/shield2.png',
-                fit: BoxFit.cover,
+           margin: const EdgeInsets.only(left: 4, right: 4),
+          height: 265,
+          width: 180,
+            color: Colors.lightBlue, 
+            child: Image.asset(
+               'assets/shield2.png',
+               fit: BoxFit.cover,
               ),
-            ),
+              ),
+
             const SizedBox(height: 0.5),
             Container(
               color: const Color.fromRGBO(137, 237, 253, 1),
               padding: const EdgeInsets.all(20.0),
               margin: const EdgeInsets.only(left: 4, right: 4),
+            
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -52,7 +54,7 @@ class MyApp6 extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        '45',
+                        '49',
                         style: TextStyle(color: Colors.pink),
                       ),
                       Text(
@@ -64,7 +66,7 @@ class MyApp6 extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        '6',
+                        '12',
                         style: TextStyle(color: Colors.pink),
                       ),
                       Text(
@@ -172,22 +174,7 @@ class MyApp6 extends StatelessWidget {
           ],
         ),
          
-        bottomNavigationBar: BottomNavigationBar(
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.mail),
-              label: 'Followup',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Profile',
-            ),
-          ],
-        ),
+       
       ),
     );
   }

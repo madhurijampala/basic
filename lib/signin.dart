@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-import'shield.dart';
+import 'shield.dart';
 
 void main() => runApp(MyApp7());
 
-// ignore: use_key_in_widget_constructors
 class MyApp7 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-       debugShowCheckedModeBanner:true,
+      debugShowCheckedModeBanner: false,
       home: SignInPage(),
     );
   }
 }
 
-// ignore: use_key_in_widget_constructors
 class SignInPage extends StatefulWidget {
   @override
   _SignInPageState createState() => _SignInPageState();
@@ -31,7 +29,18 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sign In Page'),
+        title: const Text('Sign up'),
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            // Navigate to MyApp3 when the back arrow is pressed
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MyApp6()),
+            );
+          },
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -41,17 +50,21 @@ class _SignInPageState extends State<SignInPage> {
             children: [
               TextField(
                 controller: usernameController,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Username',
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
                 ),
               ),
               const SizedBox(height: 10),
               TextField(
-                controller: emailController,
-                decoration: const InputDecoration(
+                controller: usernameController,
+                decoration: InputDecoration(
                   labelText: 'Email',
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
                 ),
               ),
               const SizedBox(height: 10),
@@ -60,7 +73,9 @@ class _SignInPageState extends State<SignInPage> {
                 obscureText: true,
                 decoration: const InputDecoration(
                   labelText: 'Password',
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  ),
                 ),
               ),
               const SizedBox(height: 10),
@@ -69,7 +84,9 @@ class _SignInPageState extends State<SignInPage> {
                 obscureText: true,
                 decoration: const InputDecoration(
                   labelText: 'Confirm Password',
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  ),
                 ),
               ),
               const SizedBox(height: 10),
@@ -84,7 +101,7 @@ class _SignInPageState extends State<SignInPage> {
                     },
                   ),
                   const Text(
-                    'Remember my choice',
+                    'Remember me',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
@@ -94,11 +111,11 @@ class _SignInPageState extends State<SignInPage> {
               const SizedBox(height: 20),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-              primary: Color.fromRGBO(43,151,212,1), // Background color
-              onPrimary: Colors.white, // Text color
-            ),
+                  primary: Color.fromRGBO(43, 151, 212, 1), // Background color
+                  onPrimary: Colors.white, // Text color
+                ),
                 onPressed: () {
-                  // Navigate to MyApp3 when Sign Up button is pressed
+                  // Navigate to MyApp6 when Sign Up button is pressed
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => MyApp6()),
@@ -113,6 +130,3 @@ class _SignInPageState extends State<SignInPage> {
     );
   }
 }
-
-// Example widget for MyApp3
-

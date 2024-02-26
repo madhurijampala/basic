@@ -12,6 +12,7 @@ class MyApp4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
           child: Column(
@@ -19,11 +20,11 @@ class MyApp4 extends StatelessWidget {
             children: [
               const CircleAvatar(
                 radius: 50,
-                backgroundImage: AssetImage('assets/images/profile_image.jpg'),
+                backgroundImage: AssetImage('assets/content.jpeg'),
               ),
               const SizedBox(height: 20),
               const Text(
-                'Content found in This Account.',
+                'Content found in this Account.',
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
@@ -71,22 +72,7 @@ class MyApp4 extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.follow_the_signs),
-              label: 'Follow Up',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Profile',
-            ),
-          ],
-        ),
+        
       ),
     );
   }
