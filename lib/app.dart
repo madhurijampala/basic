@@ -33,13 +33,18 @@ class MyApp10 extends StatelessWidget {
               const Text(
                 'Prahari App',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 30, color: Color.fromARGB(255, 184, 29, 29),),
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Font2', 
+                  ),
               ),
               const SizedBox(
                 height: 2,
               ),
               
               const SizedBox(height: 20),
+              
               
             ],
           ),

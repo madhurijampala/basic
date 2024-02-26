@@ -19,7 +19,7 @@ class MyApp5 extends StatelessWidget {
               CircleAvatar(
                 radius: 50,
                 
-                backgroundColor: Colors.green, // You can customize the color
+                backgroundColor: Colors.green, 
                 child: Icon(
                   Icons.check_circle,
                   size: 70,

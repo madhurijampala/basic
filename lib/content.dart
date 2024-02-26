@@ -43,7 +43,7 @@ class MyApp4 extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      // Handle Yes button click
+                      
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => MyApp5()),
@@ -59,7 +59,7 @@ class MyApp4 extends StatelessWidget {
                   const SizedBox(width: 20),
                   ElevatedButton(
                     onPressed: () {
-                      // Handle No button click
+                      
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => MyApp3()),

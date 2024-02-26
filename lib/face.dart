@@ -3,7 +3,7 @@ import 'package:basic/shield.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp8());
+  runApp(const MyApp8());
 }
 
 class MyApp8 extends StatelessWidget {
@@ -92,7 +92,6 @@ class MyHomePage extends StatelessWidget {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        // Handle Yes button click
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => MyApp3()),
@@ -108,7 +107,7 @@ class MyHomePage extends StatelessWidget {
                     const SizedBox(width: 20),
                     ElevatedButton(
                       onPressed: () {
-                        // Handle No button click
+                        
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => MyApp6()),

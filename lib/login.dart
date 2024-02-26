@@ -15,12 +15,12 @@ class MyApp11 extends StatelessWidget {
   }
 }
 
-class SignInPage extends StatefulWidget {
+class LogInPage extends StatefulWidget {
   @override
-  _SignInPageState createState() => _SignInPageState();
+  _LogInPageState createState() => _LogInPageState();
 }
 
-class _SignInPageState extends State<SignInPage> {
+class _LogInPageState extends State<LogInPage> {
   TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -37,7 +37,7 @@ class _SignInPageState extends State<SignInPage> {
         title: const Text('Login'),
         centerTitle: true,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             // Navigate to MyApp3 when the back arrow is pressed
             Navigator.push(

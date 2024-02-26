@@ -18,6 +18,7 @@ class MyApp3 extends StatelessWidget {
   }
 }
 
+// ignore: use_key_in_widget_constructors
 class ReportPage extends StatefulWidget {
   @override
   _ReportPageState createState() => _ReportPageState();
@@ -31,7 +32,7 @@ class _ReportPageState extends State<ReportPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(43,151,212,1),
+        backgroundColor: const Color.fromRGBO(43,151,212,1),
         
       ),
       body: Center(
@@ -44,7 +45,7 @@ class _ReportPageState extends State<ReportPage> {
             ),
             const SizedBox(height: 20),
             _buildRadioButton('Remove Fake Content'),
-            _buildRadioButton("Its Spam"),
+            _buildRadioButton("Why not removed"),
             _buildRadioButton('Scam or Fraud'),
             _buildRadioButton('False Information'),
             const SizedBox(height: 15),
@@ -52,12 +53,11 @@ class _ReportPageState extends State<ReportPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 _buildButton('Cancel', const Color.fromRGBO(43,151,212,1), () {
-                  // Navigate to MyApp7
+                
                   _navigateToMyApp7();
                 }),
                 const SizedBox(width: 20),
                 _buildButton('Report', const Color.fromRGBO(43,151,212,1), () {
-                  // Report button logic
                   // ignore: avoid_print
                   print('Reported: $selectedOption');
                   _navigateToMyApp4();
@@ -81,7 +81,7 @@ class _ReportPageState extends State<ReportPage> {
   void _navigateToMyApp7() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => MyApp8()),
+      MaterialPageRoute(builder: (context) => const MyApp8()),
     );
   }
 
