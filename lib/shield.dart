@@ -1,5 +1,5 @@
 import 'package:basic/face.dart';
-import 'package:basic/signin.dart';
+import 'package:basic/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -96,7 +96,7 @@ class MyApp6 extends StatelessWidget {
                   itemCount: 6,
                   itemBuilder: (context, index) {
                     return Center(
-                    
+                     
                       child: Image.asset(
                         'assets/prahari.jpeg',
                         fit: BoxFit.cover,
@@ -164,7 +164,7 @@ class MyApp6 extends StatelessWidget {
                       // Handle No button click
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => MyApp7()),
+                        MaterialPageRoute(builder: (context) => MyApp11()),
                       );
                     },
                     child: const Text('No'),

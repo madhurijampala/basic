@@ -39,13 +39,18 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 15),
+            ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child:
             Image.asset(
               'assets/prahari.jpeg',
               width: 320,
               height: 420,
               fit: BoxFit.cover,
             ),
+            ),
             const SizedBox(height: 15),
+            
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
